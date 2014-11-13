@@ -1,0 +1,27 @@
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:background="#006600"
+        android:layout_height="match_parent"></LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nuevo texto"
+        android:textColor="#006600"
+        android:id="@+id/milabel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botón nuevo"
+        android:id="@+id/miboton" />
+</LinearLayout>

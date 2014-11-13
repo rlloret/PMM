@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/etiquetaPrueba1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Etiqueta1.1." />
+
+        <TextView
+            android:id="@+id/etiquetaPrueba2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Etiqueta1.2." />
+
+    </TableRow>
+
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/etiquetaPrueba3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Etiqueta2.1" />
+
+        <TextView
+            android:id="@+id/etiquetaPrueba4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Etiqueta2.2." />
+
+    </TableRow>
+
+</TableLayout>

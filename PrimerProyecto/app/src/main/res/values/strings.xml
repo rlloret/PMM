@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PrimerProyecto</string>
+    <string name="LayoutTabla">EJEMPLO: Layout Tabla</string>
+    <string name="LayoutGrid">EJEMPLO: Layout Grid</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
