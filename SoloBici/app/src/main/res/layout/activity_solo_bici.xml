@@ -5,12 +5,12 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="30dip"
-    android:background="degradado" >
+    android:background="@drawable/degradado" >
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="SOLO BOCI"
+        android:text="@string/tituloAplicacion"
         android:gravity="center"
         android:textSize="25sp"
         android:layout_marginBottom="20dip"
@@ -20,24 +20,24 @@
         android:id="@+id/Boton01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Jugar" />
+        android:text="@string/Jugar" />
 
     <Button
         android:id="@+id/Boton02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Configurar" />
+        android:text="@string/Configurar" />
 
     <Button
         android:id="@+id/Boton03"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Acercade" />
+        android:text="@string/Acercade" />
 
     <Button
         android:id="@+id/Boton04"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Salir" />
+        android:text="@string/Salir" />
 
 </LinearLayout>
