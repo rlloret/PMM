@@ -19,12 +19,12 @@ public class SoloBici extends Activity {
     private Button bAcercaDe;
     private Button bJuego;
     //private Button bPreferencias;
-    //private Button bSalir;
+    private Button bSalir;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_solo_bici);
+        setContentView(R.layout.main);
 
         //Boton y escuchador para la pantalla "Juego"
         bJuego = (Button) findViewById(R.id.Boton01);
@@ -40,13 +40,14 @@ public class SoloBici extends Activity {
                 lanzarAcercaDe();
             }
         });
-        /*Boton y escuchador para la pantalla "Salir"
+        /*Boton y escuchador para la pantalla "Salir"*/
         bSalir = (Button) findViewById(R.id.Boton04);
-        bSalir.setOnClickListener(new OnClickListener(){
+        bSalir.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
                 lanzarSalir();
             }
         });
+    }
 
     //Metodo que activa la pantalla Juego
     public void lanzarJuego(){
@@ -64,6 +65,7 @@ public class SoloBici extends Activity {
     //Metodo que activa la pantalla AcercaDe
     public void lanzarSalir(){
         finish();
-    }*/
     }
-}
+
+
+    }

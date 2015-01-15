@@ -1,18 +1,17 @@
 package com.example.mati.solobici;
 
-import java.util.Vector;
+/**
+ * Created by mati on 2/12/14.
+ */
 
+import java.util.Vector;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * Created by mati on 2/12/14.
- */
 public class VistaJuego extends View {
-
     //	COCHES	//
     private Vector<Grafico> Coches;	//Vector con los Coches
     private int numCoches = 5;		//Numero inicial de Coches
@@ -27,7 +26,7 @@ public class VistaJuego extends View {
 
     // THREAD Y TIEMPO //
     //Hilo encargado de procesar el tiempo
-    //private HiloJuego hiloJuego;
+    private HiloJuego hiloJuego;
     //Tiempo que debe transcurrir para procesar cambios (ms)
     private static int PERIODO_PROCESO = 50;
     //Momento en el que se realiza el ultimo proceso
@@ -80,6 +79,44 @@ public class VistaJuego extends View {
             coche.dibujaGrafico(canvas);
         }
 
+    }
+
+    private class HiloJuego extends Thread {
+        @Override
+        public void run() {
+            while (true) {
+                actualizaMovimiento();
+            }
+        }
+
+    }
+
+
+    protected synchronized void actualizaMovimiento() {
+        long ahora = System.currentTimeMillis();
+        // No hacemos nada si el período de proceso no se ha cumplido.
+        if (ultimoProceso + PERIODO_PROCESO > ahora) {
+            return;
+        }
+        // Para una ejecución en tiempo real calculamos retardo
+        double retardo = (ahora - ultimoProceso) / PERIODO_PROCESO;
+        // Actualizamos la posición de la bici
+        bici.setAngulo((int) (bici.getAngulo() + giroBici * retardo));
+        double nIncX = bici.getIncX() + aceleracionBici
+                * Math.cos(Math.toRadians(bici.getAngulo())) * retardo;
+        double nIncY = bici.getIncY() + aceleracionBici
+                * Math.sin(Math.toRadians(bici.getAngulo())) * retardo;
+        if (Grafico.distanciaE(0, 0, nIncX, nIncY) <= Grafico.getMaxVelocidad()) {
+            bici.setIncX(nIncX);
+            bici.setIncY(nIncY);
+        }
+        bici.incrementaPos();
+
+        //Movemos los coches
+        for (Grafico coche : Coches) {
+            coche.incrementaPos();
+        }
+        ultimoProceso = ahora;
     }
 
 

@@ -1,4 +1,5 @@
 package com.example.mati.solobici;
+
 /**
  * Created by mati on 2/12/14.
  */
@@ -8,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 
 public class Grafico {
-
     private Drawable drawable; // Imagen que dibujaremos
     private double posX, posY; // Posición en la pantalla
     private double incX, incY; // Velocidad de desplazamiento
@@ -81,5 +81,71 @@ public class Grafico {
         return Math.sqrt((x - x2) * (x - x2) + (y - y2) * (y - y2));
     }
 
+    public double getPosX() {
+        return posX;
+    }
 
+    public void setPosX(double posX) {
+        this.posX = posX;
+    }
+
+    public double getPosY() {
+        return posY;
+    }
+
+    public void setPosY(double posY) {
+        this.posY = posY;
+    }
+
+    public double getIncX() {
+        return incX;
+    }
+
+    public void setIncX(double incX) {
+        this.incX = incX;
+    }
+
+    public double getIncY() {
+        return incY;
+    }
+
+    public void setIncY(double incY) {
+        this.incY = incY;
+    }
+
+    public int getAngulo() {
+        return angulo;
+    }
+
+    public void setAngulo(int angulo) {
+        this.angulo = angulo;
+    }
+
+    public int getRotacion() {
+        return rotacion;
+    }
+
+    public void setRotacion(int rotacion) {
+        this.rotacion = rotacion;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int ancho) {
+        this.ancho = ancho;
+    }
+
+    public int getAlto() {
+        return alto;
+    }
+
+    public void setAlto(int alto) {
+        this.alto = alto;
+    }
+
+    public static int getMaxVelocidad() {
+        return MAX_VELOCIDAD;
+    }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello Solobici!</string>
+    <string name="hello">Hello World, Solobici!</string>
     <string name="app_name">Solobici Didáctico</string>
     <string name="tituloAplicacion">Solobici Didáctico</string>
     <string name="Jugar">Jugar</string>
